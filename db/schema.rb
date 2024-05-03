@@ -15,6 +15,13 @@ ActiveRecord::Schema.define(version: 2021_06_26_062916) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "accounts", id: :serial, force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.text "website", null: false
+    t.text "username", null: false
+    t.text "password", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -41,6 +48,11 @@ ActiveRecord::Schema.define(version: 2021_06_26_062916) do
     t.string "email"
   end
 
+  create_table "organizations", id: :serial, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "account_id", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -51,6 +63,11 @@ ActiveRecord::Schema.define(version: 2021_06_26_062916) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "category_id"
     t.index ["category_id"], name: "index_products_on_category_id"
+  end
+
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 50, null: false
+    t.string "email", limit: 50, null: false
   end
 
   add_foreign_key "line_items", "orders"
