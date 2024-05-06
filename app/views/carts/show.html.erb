@@ -6,7 +6,7 @@
 
   <% if enhanced_cart.empty? %>
     <div class="alert alert-info" role="alert"> 
-      Your cart is empty . . . <%= link_to 'Start Shopping Here', root_path, class: "alert-link" %>.
+      Your cart is empty . . . <%= link_to 'Continue Shopping Here', root_path, class: "alert-link" %>.
     </div>
   <% else %>
     <div class="panel panel-default items">
@@ -14,9 +14,9 @@
         <thead>
           <tr>
             <th colspan="2">Product</th>
-            <th>Unit Price</th>
+            <th class="centered-text">Unit Price</th>
             <th>Quantity</th>
-            <th>Price</th>
+            <th class="centered-text">Price</th>
           </tr>
         </thead>
         <tbody>
