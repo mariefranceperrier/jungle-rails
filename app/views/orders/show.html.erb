@@ -27,8 +27,8 @@
     </table>
   </div>
 
-  <div>
-    <div>
+  <div class="row">
+    <div class="col-xs-12">
       <p><strong>Final Amount:</strong> <%= humanized_money_with_symbol(@order.total_cents / 100.0) %></p>
       <p><strong>Email:</strong> <%= @order.email %></p>
     </div>
