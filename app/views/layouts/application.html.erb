@@ -13,9 +13,18 @@
 
   <%= render 'layouts/top_nav' %>
 
+  <div class="flash">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+  </div>
+  
   <main class="container">
-    <%= yield %>
+  <%= yield %>
   </main>
+
 
   <%= yield :end_of_body %>
 
