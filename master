@@ -1,0 +1,13 @@
+  feature/about-page[m
+  feature/admin-categories[m
+  feature/dashboard-counts[m
+  feature/order-details[m
+  feature/product-specs[m
+  feature/setup-feature-specs[m
+  feature/sold-out-badge[m
+  feature/testing-home-page[m
+  feature/user-auth[m
+  fix/admin-basic-auth[m
+  fix/empty-cart-ui[m
+  fix/money-formatting[m
+* [32mmaster[m
